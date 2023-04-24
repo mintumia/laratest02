@@ -36,6 +36,7 @@ class CustomerController extends Controller
             $customer = new Customer();
             $customer->name = $request['name'];
             $customer->email = $request['email'];
+            $customer->dob = $request['dob'];
            $request['status'] = "on"? $customer->status =1:$customer->status =0;
            $customer->password = $request['password'];
             $customer->gender = $request['gender'];

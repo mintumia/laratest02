@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name',100);
             $table->string('email',150);
+            $table->date('dob',)->nullable();
             $table->boolean('status');
             $table->string('password');
             $table->string('gender',1);

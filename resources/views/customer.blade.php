@@ -19,6 +19,7 @@
         <tr>
             <th>Name</th>
             <th>Email</th>
+            <th>Date of Birth</th>
             <th>Gender</th>
             <th>Status</th>
         </tr>
@@ -30,6 +31,7 @@
             <tr>
                 <td>{{$customer->name}}</td>
                 <td>{{$customer->email}}</td>
+                <td>{{$customer->dob}}</td>
                 <td>{{$customer->gender}}</td>
                 <td>{{$customer->status}}</td>
             </tr>

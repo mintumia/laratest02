@@ -31,6 +31,14 @@
                 </div>
             </div>
             <div class="form-group mb-2 was-validated">
+                <label for="dob" class="form-label">Date of Birth : </label>
+                <input type="date" name="dob" id="dob" class="form-control">
+                <div class="invalid-feedback">
+                    Please Input Date of Birth.
+                </div>
+            </div>
+
+            <div class="form-group mb-2 was-validated">
                 <label for="password" class="form-label">Password : </label>
                 <input type="password" name="password" id="password" class="form-control" required>
                 <div class="invalid-feedback">
