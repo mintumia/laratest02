@@ -13,7 +13,7 @@
 
 <div class="container-fluid">
     <div class="d-flex align-items-center justify-content-center">
-        <form action="{{route('customer.signup')}}" method="post" class="col-sm-12 col-md-6 col-lg-4 needs-validation bg-white p-3 mt-5 rounded-3">
+        <form action="{{route('customer.create')}}" method="post" class="col-sm-12 col-md-6 col-lg-4 needs-validation bg-white p-3 mt-5 rounded-3">
            @csrf
             <h2 class="text-dark text-center">Customer Signup Form...</h2>
             <div class="form-group mb-2 was-validated">
@@ -33,6 +33,14 @@
             <div class="form-group mb-2 was-validated">
                 <label for="dob" class="form-label">Date of Birth : </label>
                 <input type="date" name="dob" id="dob" class="form-control">
+                <div class="invalid-feedback">
+                    Please Input Date of Birth.
+                </div>
+            </div>
+            <div class="form-group mb-2 was-validated">
+                <label for="address" class="form-label">Address : </label>
+                <textarea name="address" id="address" cols="10" rows="5" class="form-control"></textarea>
+
                 <div class="invalid-feedback">
                     Please Input Date of Birth.
                 </div>

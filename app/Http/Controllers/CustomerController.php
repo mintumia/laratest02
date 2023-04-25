@@ -29,6 +29,13 @@ class CustomerController extends Controller
         return view("customer");
     }
 
+    public function signup(){
+
+
+        return view('signup');
+    }
+
+
 
     public function create(Request $request)
     {
@@ -37,14 +44,17 @@ class CustomerController extends Controller
             $customer->name = $request['name'];
             $customer->email = $request['email'];
             $customer->dob = $request['dob'];
+            $customer->address = $request['address'];
            $request['status'] = "on"? $customer->status =1:$customer->status =0;
            $customer->password = $request['password'];
             $customer->gender = $request['gender'];
             $customer->save();
-            redirect(route('customer.signup'));
+          return  redirect(route('customer'));
+        }else{
+            return view('signup');
         }
 
-        return view('signup');
+
     }
 
     public function read()

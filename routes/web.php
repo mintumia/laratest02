@@ -20,8 +20,8 @@ use App\Http\Controllers\CustomerController;
 
 Route::get("/",[CustomerController::class,"read"])->name('read');
 Route::get("/customer",[CustomerController::class,"read"])->name('customer');
-Route::get('/customer/signup',[CustomerController::class,"create"])->name("customer.signup");
-Route::post('/customer/signup',[CustomerController::class,'create'])->name("customer.signup");
+Route::get('/customer/signup',[CustomerController::class,"signup"])->name("customer.signup");
+Route::post('/customer/signup',[CustomerController::class,'create'])->name("customer.create");
 Route::get("/login",[CustomerController::class,"login"])->name("login");
 Route::get("/login2",[CustomerController::class,"login2"]);
 Route::get("/user/{id}",[CustomerController::class,"setSession"]);
