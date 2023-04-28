@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\Mintuapps\TestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,6 @@ Route::get("/login",[CustomerController::class,"login"])->name("login");
 Route::get("/login2",[CustomerController::class,"login2"]);
 Route::get("/user/{id}",[CustomerController::class,"setSession"]);
 Route::get('/logout',[CustomerController::class,'sessionUnset']);
+Route::get('/test',[TestController::class,'index']);
+//Route::get('/test2',[TestController::class,'test2']);
+
